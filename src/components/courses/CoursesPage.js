@@ -41,7 +41,7 @@ class CoursesPage extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="container-padding">
         {this.state.redirectToAddCoursePage && <Redirect to="/course" />}
         <h2>Courses</h2>
         {this.props.loading ? (
@@ -61,7 +61,7 @@ class CoursesPage extends React.Component {
             />
           </>
         )}
-      </>
+      </div>
     );
   }
 }

@@ -32,7 +32,7 @@ function AuthorsPage ({
   };
 
     return (
-      <>
+      <div className="container-padding">
         {state && <Redirect to="/editAuthors" />}
         <h2>Authors</h2>
         {loading ? (
@@ -52,7 +52,7 @@ function AuthorsPage ({
             />
           </>
         )}
-      </>
+      </div>
     );
 }
 
