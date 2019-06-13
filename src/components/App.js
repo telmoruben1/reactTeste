@@ -1,8 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./home/HomePage";
+import ManageAccedeForm from "./accede/ManageAccedeForm";
 import AboutPage from "./about/AboutPage";
-import Header from "./common/Header";
+import Header from "./header/Header";
 import PageNotFound from "./PageNotFound";
 import CoursesPage from "./courses/CoursesPage";
 import AuthorsPage from "./authors/AuthorsPage";
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/accede" component={ManageAccedeForm} />
         <Route path="/about" component={AboutPage} />
         <Route path="/courses" component={CoursesPage} />
         <Route path="/authors" component={AuthorsPage} />

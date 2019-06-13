@@ -1,10 +1,16 @@
 import React from "react";
-import ControlledCarousel from "../common/ControlledCarousel";
+import ControlledCarousel from "./ControlledCarousel";
+import CardsInformation from "./CardsInformation";
+import Footer from "./Footer";
 
 
 const HomePage = () => (
   <>
-    <ControlledCarousel></ControlledCarousel>
+    <div style={{minHeight:'80%'}}>
+      <ControlledCarousel></ControlledCarousel>
+      <CardsInformation></CardsInformation>
+    </div> 
+    <Footer></Footer>
   </>
 );
 

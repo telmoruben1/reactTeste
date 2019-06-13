@@ -92,9 +92,28 @@ const newAuthor = {
   numbersBooks: 0,
   genre: ""
 };
+const newUser = {
+  id: null,
+  name: "",
+  email: "",
+  newPassword: "",
+  validationPassword: "",
+  knowledge: "",
+  designationEntity: "",
+  nifEntity:0,
+  addressEntity:"",
+  postalCodeEntity: "",
+  localityEntity:"",
+  countryEntity: "",
+  emailEntity:"",
+  phoneEntity:"",
+  generalConditions:false,
+  newsletter:false
+};
 
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
 module.exports = {
+  newUser,
   newCourse,
   newAuthor,
   courses,

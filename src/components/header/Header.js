@@ -10,7 +10,7 @@ const Header = () => {
             <Image src="../src/css/img/logomenu.png"/>
           </Navbar.Brand>
           <Nav inline className="navbar-header">
-            <Nav.Link className="content-menu ml-4" href="/"><Image className="mr-1 mb-1" src="../src/css/img/aderir.png"/>Aderir</Nav.Link>
+            <Nav.Link className="content-menu ml-4" href="/accede"><Image className="mr-1 mb-1" src="../src/css/img/aderir.png"/>Aderir</Nav.Link>
             <Nav.Link className="content-menu ml-4" href="/caracteristicas"><Image className="mr-1 mb-1" src="../src/css/img/carateristicas.png"/>Carateristicas</Nav.Link>
             <Nav.Link className="content-menu ml-4" href="/precos"><Image className="mr-1 mb-1" src="../src/css/img/euro.png"/>Preços</Nav.Link>
             <Nav.Link className="content-menu ml-4" href="/qualidade"><Image className="mr-1 mb-1" src="../src/css/img/qualidade.png"/>Qualidade</Nav.Link>

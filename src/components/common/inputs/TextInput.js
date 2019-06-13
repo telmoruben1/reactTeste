@@ -17,7 +17,6 @@ const TextInput = ({ name, label, onChange, placeholder, valueString, valueInt, 
           className="form-control"
           placeholder={placeholder}
           value={valueString != null ? valueString : valueInt}
-          onChange={onChange}
         />
         {error && <div className="alert alert-danger">{error}</div>}
       </div>

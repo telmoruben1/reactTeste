@@ -36,36 +36,30 @@ class ControlledCarousel extends React.Component {
               src="/src/css/img/idok_banner_gts.jpg"
               alt="First slide"
             />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
+            <div className="carousel-img1-title1">NOVO SERVIÇO</div>
+            <div className="carousel-img1-title2"></div>
+            <div className="carousel-img1-title3">ASSINATURA DIGITAL</div>
+            <div className="carousel-img1-title4">SEM JAVA, TOKENS OU LEITOR DE CARTÕES</div>
           </Carousel.Item>
+
           <Carousel.Item>
             <img
               className="d-block w-100"
               src="/src/css/img/idok_banner7_1.jpg"
               alt="Third slide"
             />
-  
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
+            <div className="carousel-img2-title1">TORNE A SUA ENTIDADE<br></br>MAIS SUSTENTÁVEL</div>
+            
           </Carousel.Item>
+
           <Carousel.Item>
             <img
               className="d-block w-100"
               src="/src/css/img/idok_banner10_1.jpg"
               alt="Third slide"
             />
-  
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
+            <div className="carousel-img3-title1">Consulte os seus documentos</div>
+            <div className="carousel-img3-title2">EM QUALQUER LUGAR</div>
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -73,13 +67,8 @@ class ControlledCarousel extends React.Component {
               src="/src/css/img/idok_banner11_1.jpg"
               alt="Third slide"
             />
-  
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
+            <div className="carousel-img4-title1">Classificação e Numeração de Documentos</div>
+            <div className="carousel-img4-title2">SIMPLES, RÁPIDO E SEGURO</div>
           </Carousel.Item>
         </Carousel>
       );
