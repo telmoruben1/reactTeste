@@ -88,6 +88,47 @@ body {
 .ref-cards:hover{
   color: #679926;
 }
+.container-form-aderir{
+  margin-top:80px;
+  margin-left:80px;
+  margin-right:165px;
+}
+.destaques label.destaque-1{
+	font-size: 30px;
+	font-weight: 600;
+}
+.destaques{
+	padding-top: 16px;
+	color: #7faf41;
+	border-spacing: 0;
+	font-size: 24px;
+	line-height: 23px;
+	font-weight: 300;
+	font-family: 'Roboto Condensed';
+}
+.destaques .condensed{
+	font-family: 'Roboto Condensed';
+}
+.titulo-direita{
+  padding-left: 333px;
+  padding-top: 7px;
+}
+.form-titulos{
+  font-family: 'Roboto Condensed';
+  color: #7faf41;
+  line-height: 30px;
+  font-weight: 300;
+  font-size: 24px;
+}
+.button-aderir{
+  background-color: #648a33;
+  border-color: #51702a;
+  color:white
+}
+.text-form-aderir{
+  line-height: 1;
+  color: #777;
+}
 /* .facebook:hover{
   background-image:url('./img/facebook_hover.png');
 }
@@ -106,5 +147,16 @@ body {
 @media screen and (min-width: 767px) {
   .text-footer{
     margin-left: 28%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .titulo-direita{
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .button-aderir{
+    margin: 0%!important;
+    width: 100%;
   }
 }

@@ -1,13 +1,109 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TextInput from "../common/inputs/TextInput";
+import TextAreaInput from "../common/inputs/TextAreaInput";
 import SelectInput from "../common/inputs/SelectInput";
+import { Container, Row, Col  } from 'react-bootstrap';
 
 const AccedeForm = ({
   onSave,
+  onChange,
   saving = false,
   errors = {}
 }) => {
+console.log(errors);
+  const conhecimentos = [
+      {
+          "name":"Através de um amigo",
+          "id":1
+      },
+      {
+          "name":"Pesquisa na Internet",
+          "id":2
+      },
+      {
+          "name":"Redes sociais",
+          "id":3
+      },
+      {
+          "name":"Televisão",
+          "id":4
+      },
+      {
+          "name":"Campanha por telefone",
+          "id":5
+      },
+      {
+          "name":"Campanha por carta",
+          "id":6
+      },
+      {
+          "name":"Outra",
+          "id":7
+      }
+  ]
+  const distritos = [
+    {
+        'name':"Aveiro",
+    },
+    {
+        'name':"Braga",
+    },
+    {
+        'name':"Beja",
+    },
+    {
+        'name':"Bragança",
+    },
+    {
+        'name':"Castelo Branco",
+    },
+    {
+        'name':"Coimbra",
+    },
+    {
+        'name':"Évora",
+    },
+    {
+        'name':"Faro",
+    },
+    {
+        'name':"Guarda",
+    },
+    {
+        'name':"Leiria",
+    },
+    {
+        'name':"Lisboa",
+    },
+    {
+        'name':"Portalegre",
+    },
+    {
+        'name':"Porto",
+    },
+    {
+        'name':"Região Autónoma da Madeira",
+    },
+    {
+        'name':"Região Autónoma dos Açores",
+    },
+    {
+        'name':"Santarém",
+    },
+    {
+        'name':"Setúbal",
+    },
+    {
+        'name':"Viana do Castelo",
+    },
+    {
+        'name':"Vila Real",
+    },
+    {
+        'name':"Viseu",
+    }
+  ];
   const countrys =
         [ 
             {"name": "Afghanistan", "code": "AF"}, 
@@ -255,68 +351,178 @@ const AccedeForm = ({
             {"name": "Zambia", "code": "ZM"}, 
             {"name": "Zimbabwe", "code": "ZW"} 
             ];
-  const genre = [
-          {
-            name : "Romance"
-          },
-          {
-            name : "Comedia"
-          },
-          {
-            name : "Action"
-          },
-          {
-            name : "Poetry"
-          }
-      ];
 
   return (
-    <form onSubmit={onSave}>
-      {errors.onSave && (
-        <div className="alert alert-danger" role="alert">
-          {errors.onSave}
-        </div>
-      )}
-      <TextInput
-        name="name"
-        label="Name"
-        error={errors.title}
-      />
+    <Container>
+        <Row>
+            <Col className="col-md-8 col-xs-6 offset-md-2 offset-sm-2 offset-1 col-10" style={{marginTop:'5%'}}>
+            <div className="destaques">
+                <div>
+                    <label className="destaque-1">Adira</label>
+                    <label className="condensed" style={{fontSize:'24px', marginLeft:'1%',marginRight:'1%'}}> e usufrua de </label>
+                    <label className="destaque-1 titulo-esquerda" style={{textDecoration: 'underline'}}>30 dias totalmente grátis</label>
+                </div>
+                <div className="titulo-direita">
+                    <label className="destaque-1">sem compromisso!</label>
+                </div>
+            </div>
+            <form onSubmit={onSave}>
+                {errors.onSave && (
+                    <div className="alert alert-danger" role="alert">
+                    {errors.onSave}
+                    </div>
+                )}
+                <h1 className="form-titulos mt-5"> Dados da Entidade </h1>
+                <TextInput className="mt-3"
+                    name="designacao"
+                    label="Designacao *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.designacao}
+                />
 
-      <SelectInput
-        name="country"
-        label="Country"
-        defaultOption="Select Country"
-        options={countrys.map(country => ({
-          value: country.name,
-          text: country.name
-        }))}
-        error={errors.author}
-      />
+                <TextInput
+                    name="nif"
+                    label="NIF *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.nif}
+                />
 
-      <TextInput
-        name="nobelAwards"
-        label="Nobel Awards"
-        error={errors.category}
-      />
-      
-      <TextInput
-        name="numbersBooks"
-        label="Numbers of Books"
-        error={errors.category}
-      />
+                <TextInput
+                    name="cp"
+                    label="Código Postal *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.cp}
+                />
 
+                <TextInput
+                    name="localidade"
+                    label="Localidade *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.localidade}
+                />
 
-      <button type="submit" disabled={saving} className="btn btn-primary">
-        {saving ? "Saving..." : "Save"}
-      </button>
-    </form>
+                <SelectInput
+                    name="pais"
+                    label="País"
+                    onChange={onChange}
+                    defaultOption="Selecione o Pais"
+                    options={countrys.map(country => ({
+                    value: country.name,
+                    text: country.name
+                    }))}
+                    error={errors.pais}
+                />
+                <SelectInput
+                    name="distrito"
+                    label="Distrito"
+                    onChange={onChange}
+                    defaultOption="Slecione Distrito"
+                    options={distritos.map(distrito => ({
+                    value: distrito.name,
+                    text: distrito.name
+                    }))}
+                    error={errors.distrito}
+                />
+
+                <TextInput
+                    name="email"
+                    label="Email *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.email}
+                />
+
+                <TextInput
+                    name="telefone"
+                    label="Telefone *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.telefone}
+                />
+                
+                <TextAreaInput
+                    name="morada"
+                    label="Morada *"
+                    onChange={onChange}
+                    error={errors.morada}
+                />
+                <h1 className="form-titulos mt-4"> Dados do Utilizador </h1>
+                <TextInput className="mt-3"
+                    name="nomeUtilizador"
+                    label="Nome Completo *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.nomeUtilizador}
+                />
+
+                <TextInput
+                    name="emailUtilizador"
+                    label="Email *"
+                    type="3"
+                    onChange={onChange}
+                    error={errors.emailUtilizador}
+                />
+                <TextInput
+                    name="password"
+                    label="Nova senha *"
+                    type="1"
+                    onChange={onChange}
+                    error={errors.password}
+                />
+                <TextInput
+                    name="cofirPassword"
+                    label="Confirmação senha *"
+                    type="1"
+                    onChange={onChange}
+                    error={errors.cofirPassword}
+                />
+
+                <SelectInput
+                    name="conhecimento"
+                    label="Como teve conhecimento do iDOK? *"
+                    onChange={onChange}
+                    defaultOption=""
+                    options={conhecimentos.map(conhecimento => ({
+                    value: conhecimento.id,
+                    text: conhecimento.name
+                    }))}
+                    error={errors.conhecimento}
+                />
+                <div className="form-group">
+                    <span className="text-form-aderir">( <span style={{color:'#ee0000'}}>*</span> ) Campos de preenchimento obrigatório.</span>
+                </div>
+                <TextInput
+                    name="condicoes"
+                    label="Li e aceito as Condições Gerais de adesão"
+                    type="4"
+                    onChange={onChange}
+                    error={errors.condicoes}
+                />
+                <TextInput
+                    name="newsletter"
+                    label="Pretendo receber newsletters ou ser alertado sobre campanhas promocionais relativas a soluções comercializadas pela ACIN iCloud Solutions."
+                    type="4"
+                    onChange={onChange}
+                    error={errors.newsletter}
+                />
+                <button type="submit" disabled={saving} className="btn button-aderir" style={{marginLeft:'662px'}}>
+                    {saving ? "Aderindo..." : "Aderir"}
+                </button>
+            </form>
+            </Col>
+        </Row>
+    </Container>
   );
 };
 
 AccedeForm.propTypes = {
   errors: PropTypes.object,
   onSave: PropTypes.func.isRequired,
+  onChange:PropTypes.func.isRequired,
   saving: PropTypes.bool
 };
 

@@ -12,7 +12,7 @@ const SelectInput = ({
 }) => {
   return (
     <div className="form-group">
-      <label htmlFor={name}>{label}</label>
+      <label className="text-form-aderir" htmlFor={name}>{label}</label>
       <div className="field">
         {/* Note, value is set here rather than on the option - docs: https://facebook.github.io/react/docs/forms.html */}
         <select
@@ -30,7 +30,7 @@ const SelectInput = ({
             );
           })}
         </select>
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error && <div style={{color:'#ee0000'}}>Campo de preenchimento obrigatório</div>}
       </div>
     </div>
   );
