@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image  } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const CardsInformation = () => {
   return (
@@ -23,7 +24,7 @@ const CardsInformation = () => {
         </Row>
         <Row>
           <Col className="col-md-7 mt-2" style={{marginLeft:'55%'}}>
-             <a className="ref-cards" href="/aderir">Registe-se aqui!</a>
+             <Link to="/accede" className="ref-cards">Registe-se aqui!</Link>
           </Col>
         </Row>
       </Col>
@@ -45,7 +46,7 @@ const CardsInformation = () => {
         </Row>
         <Row>
           <Col className="col-md-8 mt-2" style={{marginLeft:'46%'}}>
-             <a className="ref-cards" href="/aderir">Consulte o catálogo!</a>
+             <Link to="" className="ref-cards">Consulte o catálogo!</Link>
           </Col>
         </Row>
       </Col>
@@ -67,7 +68,7 @@ const CardsInformation = () => {
         </Row>
         <Row>
           <Col className="col-md-7 mt-2" style={{marginLeft:'44%'}}>
-             <a className="ref-cards" href="/aderir">Conheça as vantagens!</a>
+             <Link to="/caracteristicas" className="ref-cards">Conheça as vantagens!</Link>
           </Col>
         </Row>
       </Col>

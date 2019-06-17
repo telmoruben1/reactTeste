@@ -4,7 +4,6 @@ import {saveUser } from "../../redux/actions/userActions";
 import PropTypes from "prop-types";
 import AccedeForm from "./AccedeForm";
 import Footer from "../home/Footer";
-// import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
 function ManageAccedeForm({
@@ -14,6 +13,7 @@ function ManageAccedeForm({
 }) {
  
   const [user, setUser] = useState({ ...props.user });
+  const [isVerified, setVerified] = useState(false);
   const [errors, setErrors] = useState({});
   const [saving, setSaving] = useState(false);
 
@@ -34,6 +34,7 @@ function ManageAccedeForm({
     if (!cofirPassword) errors.cofirPassword = "cofirPassword is required";
     if (!conhecimento) errors.conhecimento = "conhecimento is required";
     if (!condicoes) errors.condicoes = "condicoes is required";
+    if (!isVerified) errors.verified = " reCaptcha is required"; 
 
     setErrors(errors);
     // Form is valid if the errors object still has no properties
@@ -48,6 +49,7 @@ function ManageAccedeForm({
   }
   function handleSave(event) {
     event.preventDefault();
+    
     if (!formIsValid()) return;
     setSaving(true);
     saveUser(user)
@@ -60,12 +62,18 @@ function ManageAccedeForm({
         setErrors({ onSave: error.message });
       });
   }
+  function verifyCallback(response) {
+    if(response) {
+      setVerified(true);
+    }
+  }
   return (
     <>
         <AccedeForm
             errors={errors}
             onSave={handleSave}
             onChange={handleChange}
+            verifyCallback={verifyCallback}
             saving={saving}
         />
         <Footer></Footer>

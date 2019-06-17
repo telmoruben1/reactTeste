@@ -23,7 +23,6 @@ const TextInput = ({ name, label, onChange, placeholder, type, error }) => {
     default:
       // code block
   }
-  console.log(error);
   return (
     <div className={wrapperClass}>
       { parseInt(type) != 4 ? <label className="text-form-aderir" htmlFor={name}>{label}</label> : ""}
@@ -44,6 +43,7 @@ const TextInput = ({ name, label, onChange, placeholder, type, error }) => {
 
 TextInput.propTypes = {
   name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,

@@ -129,6 +129,32 @@ body {
   line-height: 1;
   color: #777;
 }
+.box-login{
+  position: absolute;
+  top: 110px;
+  width: 240px;
+  box-shadow: 2px 2px 10px 0px grey;
+  margin-top: 20px;
+  left: 70%;
+  background-color: #E6E7E8;
+  opacity: 0.9;
+  padding: 10px 20px 20px 20px;
+  border-top: 4px solid #7faf41
+}
+.button-log-in{
+  height: 28px;
+  padding: 8px 25px 8px 25px;
+  width: auto;
+  line-height: 0px;
+  background-color: #7faf41;
+  color: white;
+  font-size: 14px;
+}
+.text-form-log-in{
+  color: #7a7a7a;
+  font-size: 14px;
+  font-weight: 300;
+}
 /* .facebook:hover{
   background-image:url('./img/facebook_hover.png');
 }

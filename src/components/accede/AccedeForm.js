@@ -4,14 +4,15 @@ import TextInput from "../common/inputs/TextInput";
 import TextAreaInput from "../common/inputs/TextAreaInput";
 import SelectInput from "../common/inputs/SelectInput";
 import { Container, Row, Col  } from 'react-bootstrap';
+import Recaptcha from 'react-recaptcha';
 
 const AccedeForm = ({
   onSave,
   onChange,
+  verifyCallback,
   saving = false,
   errors = {}
 }) => {
-console.log(errors);
   const conhecimentos = [
       {
           "name":"Através de um amigo",
@@ -495,6 +496,16 @@ console.log(errors);
                 <div className="form-group">
                     <span className="text-form-aderir">( <span style={{color:'#ee0000'}}>*</span> ) Campos de preenchimento obrigatório.</span>
                 </div>
+
+                <div className="form-group">
+                    <Recaptcha
+                        sitekey="6LdEMakUAAAAAFurySnGetLu2hCy0uRZ7eKq2pQf"
+                        render="explicit"
+                        verifyCallback={verifyCallback}
+                    />
+                    {errors.verified && <div style={{color:'#ee0000'}}>Campo de preenchimento obrigatório</div>}
+                </div>
+
                 <TextInput
                     name="condicoes"
                     label="Li e aceito as Condições Gerais de adesão"
@@ -523,6 +534,7 @@ AccedeForm.propTypes = {
   errors: PropTypes.object,
   onSave: PropTypes.func.isRequired,
   onChange:PropTypes.func.isRequired,
+  verifyCallback:PropTypes.func.isRequired,
   saving: PropTypes.bool
 };
 
