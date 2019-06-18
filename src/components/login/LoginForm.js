@@ -22,7 +22,7 @@ const LoginForm = ({
                 <TextInput className="text-form-log-in mt-3"
                     name="utilizador"
                     label="Utilizador:"
-                    type="3"
+                    type="5"
                     onChange={onChange}
                     error={errors.designacao}
                 />

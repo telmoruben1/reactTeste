@@ -7,6 +7,7 @@ const TextInput = ({ name, label, onChange, placeholder, type, error }) => {
     wrapperClass += " " + "has-error";
   }
   var tipo;
+  var classe = "form-control";
   switch(parseInt(type)) {
     case 1:
       tipo = "password";
@@ -19,6 +20,10 @@ const TextInput = ({ name, label, onChange, placeholder, type, error }) => {
       break;
     case 4:
       tipo = "checkbox";
+      classe = "mr-1";
+      break;
+    case 5:
+      classe= "input-form-login";
       break;
     default:
       // code block
@@ -30,7 +35,7 @@ const TextInput = ({ name, label, onChange, placeholder, type, error }) => {
         <input
           type={tipo}
           name={name}
-          className={ parseInt(type) != 4 ? "form-control" : "mr-1"}
+          className={ classe}
           placeholder={placeholder}
           onChange={onChange}
         />

@@ -127,7 +127,9 @@ body {
 }
 .text-form-aderir{
   line-height: 1;
-  color: #777;
+  font-size: 14px;
+  color: #7a7a7a;
+  font-weight: 300;
 }
 .box-login{
   position: absolute;
@@ -150,10 +152,15 @@ body {
   color: white;
   font-size: 14px;
 }
-.text-form-log-in{
-  color: #7a7a7a;
-  font-size: 14px;
-  font-weight: 300;
+.input-form-login{
+  box-sizing: border-box;
+  height: 25px;
+  border-radius: 4px;
+  width: 200px;
+  border-bottom: 1px solid white;
+  border-top: 2px solid #adadad;
+  border-left: 2px solid #adadad;
+  border-right: 1px #cccccc;
 }
 /* .facebook:hover{
   background-image:url('./img/facebook_hover.png');
