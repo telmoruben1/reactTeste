@@ -4,8 +4,9 @@ import {saveUser } from "../../redux/actions/userActions";
 import PropTypes from "prop-types";
 import LoginForm from "./LoginForm";
 import RecoveryForm from "./RecoveryForm";
-import Footer from "../home/Footer";
+import Erro from "./Erro";
 import { toast } from "react-toastify";
+import CcForm from "./CcForm";
 
 function ManageLoginForms({
   saveUser,
@@ -41,13 +42,16 @@ function ManageLoginForms({
 //     // Form is valid if the errors object still has no properties
 //     return Object.keys(errors).length === 0;
 //   }
-//   function handleChange(event) {
-//     const { name, value } = event.target;
-//     setUser(prevUser => ({
-//       ...prevUser,
-//       [name]: value
-//     }));
-//   }
+  function handleChangeAction(event) {
+    const { name, value } = event.target;
+    if(parseInt(name) == 1){
+      setTypeForm(1);
+    } else if (parseInt(name) == 2) {
+      setTypeForm(2)
+    } else if (parseInt(name) == 3){
+      setTypeForm(3)
+    }
+  }
 //   function handleSave(event) {
 //     event.preventDefault();
     
@@ -74,11 +78,29 @@ function ManageLoginForms({
         {(() => {
         switch(typeform) {
           case 1:
-            return <LoginForm></LoginForm>;
+            return <LoginForm
+                      // errors={errors}
+                      // onSave={handleSave}
+                      onChangeAction={handleChangeAction}
+                      // verifyCallback={verifyCallback}
+                      // saving={saving}
+                    />
           case 2:
-            return <p>2</p>;
+            return <RecoveryForm
+                      // errors={errors}
+                      // onSave={handleSave}
+                      onChangeAction={handleChangeAction}
+                      // verifyCallback={verifyCallback}
+                      // saving={saving}
+                    />;
           case 3:
-            return <p>3</p>;
+            return <CcForm
+                      // errors={errors}
+                      // onSave={handleSave}
+                      onChangeAction={handleChangeAction}
+                      // verifyCallback={verifyCallback}
+                      // saving={saving}
+                    />; 
           default:
             return null;
         }

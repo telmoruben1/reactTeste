@@ -42,6 +42,7 @@ function ManageAccedeForm({
   }
   function handleChange(event) {
     const { name, value } = event.target;
+
     setUser(prevUser => ({
       ...prevUser,
       [name]: value

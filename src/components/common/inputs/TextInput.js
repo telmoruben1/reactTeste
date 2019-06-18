@@ -23,13 +23,17 @@ const TextInput = ({ name, label, onChange, placeholder, type, error }) => {
       classe = "mr-1";
       break;
     case 5:
-      classe= "input-form-login";
+      classe= "input-form-login form-control";
+      break;
+    case 6:
+      tipo = "password";
+      classe = "input-form-login form-control"
       break;
     default:
       // code block
   }
   return (
-    <div className={wrapperClass}>
+    <div className="mt-1">
       { parseInt(type) != 4 ? <label className="text-form-aderir" htmlFor={name}>{label}</label> : ""}
       <div className="field">
         <input
