@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CardsInformation = () => {
   return (
-    <Container className="d-none d-xl-block d-md-none" style={{height:'255px'}}>
+    <Container className="d-none d-xl-block d-md-none cards-home" style={{height:'255px'}}>
     <Row  className="justify-content-md-center " >
       <Col className="border-color mt-4 " md="3" xs="12" style={{height:'205px'}}>
         <Row className="justify-content-md-center">

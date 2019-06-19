@@ -77,7 +77,6 @@ function ManageAccedeForm({
             verifyCallback={verifyCallback}
             saving={saving}
         />
-        <Footer></Footer>
     </>
   );
 }

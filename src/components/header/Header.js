@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, Navbar, Image } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes, faSignInAlt} from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
   function closeNav() {
@@ -15,14 +15,18 @@ const Header = () => {
     <Navbar expand="lg" className="header-page" >
       
         <span className="icon-side-bar" style={{fontSize:'30px'}} onClick={openNav}> <FontAwesomeIcon className="icon-bars" icon={faBars} /></span>
+        <div className="container-logo">
+          <Image src="../src/css/img/logomenu.png"/>
+        </div>
         <div id="mySidenav" className="sidenav">
-          <a href="javascript:void(0)" className="closebtn" onClick={closeNav}><FontAwesomeIcon className="icon-bars" icon={faTimes} /></a>
-            <Link className="content-menu ml-4" to="/accede"><Image className="mr-1 mb-1" src="../src/css/img/aderir.png"/>Aderir</Link>
-            <Link className="content-menu ml-4" to="/caracteristicas"><Image className="mr-1 mb-1" src="../src/css/img/carateristicas.png"/>Carateristicas</Link>
-            <Link className="content-menu ml-4" to="/precos"><Image className="mr-1 mb-1" src="../src/css/img/euro.png"/>Preços</Link>
-            <Link className="content-menu ml-4" to="/qualidade"><Image className="mr-1 mb-1" src="../src/css/img/qualidade.png"/>Qualidade</Link>
-            <a className="content-menu ml-4" href="www.acin.pt" target="_blank"><Image className="mr-1 mb-1" src="../src/css/img/empresa.png"/>ACIN</a>
-            <Link className="content-menu ml-4" to="/contactos"><Image className="mr-1 mb-1" src="../src/css/img/contactos.png"/>Contactos</Link>
+          <a href="javascript:void(0)" className="closebtn" onClick={closeNav}><FontAwesomeIcon className="icon-bars" size="xs" icon={faTimes} /></a>
+            <Link className="content-menu side-bar ml-4" to="/"><FontAwesomeIcon className="icon-bars mr-1" size="xs" icon={faSignInAlt} />Entrar</Link>
+            <Link className="content-menu ml-4 side-bar" to="/accede"><Image className="mr-1 mb-1" src="../src/css/img/aderir.png"/>Aderir</Link>
+            <Link className="content-menu ml-4 side-bar" to="/feature"><Image className="mr-1 mb-1" src="../src/css/img/carateristicas.png"/>Carateristicas</Link>
+            <Link className="content-menu ml-4 side-bar" to="/price"><Image className="mr-1 mb-1" src="../src/css/img/euro.png"/>Preços</Link>
+            <Link className="content-menu ml-4 side-bar" to="/qualidade"><Image className="mr-1 mb-1" src="../src/css/img/qualidade.png"/>Qualidade</Link>
+            <a className="content-menu ml-4 side-bar" href="www.acin.pt" target="_blank"><Image className="mr-1 mb-1" src="../src/css/img/empresa.png"/>ACIN</a>
+            <Link className="content-menu ml-4 side-bar" to="/contactos"><Image className="mr-1 mb-1" src="../src/css/img/contactos.png"/>Contactos</Link>
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
@@ -31,8 +35,8 @@ const Header = () => {
           </Link>
           <Nav inline className="navbar-header">
             <Link className="content-menu ml-4" to="/accede"><Image className="mr-1 mb-1" src="../src/css/img/aderir.png"/>Aderir</Link>
-            <Link className="content-menu ml-4" to="/caracteristicas"><Image className="mr-1 mb-1" src="../src/css/img/carateristicas.png"/>Carateristicas</Link>
-            <Link className="content-menu ml-4" to="/precos"><Image className="mr-1 mb-1" src="../src/css/img/euro.png"/>Preços</Link>
+            <Link className="content-menu ml-4" to="/feature"><Image className="mr-1 mb-1" src="../src/css/img/carateristicas.png"/>Carateristicas</Link>
+            <Link className="content-menu ml-4" to="/price"><Image className="mr-1 mb-1" src="../src/css/img/euro.png"/>Preços</Link>
             <Link className="content-menu ml-4" to="/qualidade"><Image className="mr-1 mb-1" src="../src/css/img/qualidade.png"/>Qualidade</Link>
             <a className="content-menu ml-4" href="www.acin.pt" target="_blank"><Image className="mr-1 mb-1" src="../src/css/img/empresa.png"/>ACIN</a>
             <Link className="content-menu ml-4" to="/contactos"><Image className="mr-1 mb-1" src="../src/css/img/contactos.png"/>Contactos</Link>

@@ -9,6 +9,9 @@ import CoursesPage from "./courses/CoursesPage";
 import AuthorsPage from "./authors/AuthorsPage";
 import ManageCoursePage from "./courses/ManageCoursePage";
 import ManageAuthorForm from "./authors/ManageAuthorForm";
+import Price from "./price/Price";
+import Footer from "./home/Footer";
+import Feature from "./feature/Feature";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,9 +28,11 @@ function App() {
         <Route path="/editAuthors/:id" component={ManageAuthorForm} />
         <Route path="/editAuthors" component={ManageAuthorForm} />
         <Route path="/course/:slug" component={ManageCoursePage} />
-        <Route path="/course" component={ManageCoursePage} />
+        <Route path="/feature" component={Feature} />
+        <Route path="/price" component={Price} />
         <Route component={PageNotFound} />
       </Switch>
+      <Footer></Footer>
       <ToastContainer autoClose={3000} hideProgressBar />
     </div>
   );
