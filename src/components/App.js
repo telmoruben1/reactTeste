@@ -14,6 +14,7 @@ import Footer from "./home/Footer";
 import Feature from "./feature/Feature";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Quality from "./quality/Quality";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/course/:slug" component={ManageCoursePage} />
         <Route path="/feature" component={Feature} />
         <Route path="/price" component={Price} />
+        <Route path="/quality" component={Quality} />
         <Route component={PageNotFound} />
       </Switch>
       <Footer></Footer>

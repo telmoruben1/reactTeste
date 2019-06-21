@@ -12,7 +12,6 @@ const HomePage = () => (
       <ManageLoginForms></ManageLoginForms>
       <CardsInformation></CardsInformation>
     </div> 
-    <Footer></Footer>
   </>
 );
 
