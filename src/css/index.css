@@ -386,12 +386,105 @@ body {
   font-family: 'Roboto Condensed',"Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #7faf41;
   font-size: 30px;
+  margin: 0;
 }
 .container-price-cards{
   display: flex;
   justify-content:center;
   flex-direction:column;
   position: relative;
+  margin-left: 8%;
+  margin-top: 6%;
+  width: 60%;
+}
+.description-price{
+    color: #777;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 72%;
+
+}
+.container-grid-prices{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding-left: 90px;
+  grid-column-gap: 17px;
+  grid-row-gap: 16px;
+  width: 113%;
+  height: 378px;
+}
+.price{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 50px;
+  display: grid;
+}
+.price-5 {
+      /* Item1 will start on row 1 and column 3, and span 2 rows and 2 columns: */
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 50px;
+  display: grid;
+  grid-area: 1 / 3 / span 2 / span 2;
+  width: 74%;
+}
+.container-title-table{
+  background-color:#7faf41;
+  color:white;
+  margin-left: 8%;
+  font-size: 19px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.memory{
+  text-align: center;
+  font-size: 38px;
+}
+.memory-20G{
+  text-align: center;
+  font-size: 88px;
+  position: relative;
+  top: -2%;
+}
+.small-text{
+  font-size: 15px;
+  color: #7faf41;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.medium-text{
+  font-size: 20px;
+  color: #7faf41;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.medium-text-20G{
+  font-size: 20px;
+  color: gray;
+  font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  display: block;
+  line-height: 18px;
+}
+.longer-text{
+  font-size: 40px;
+  color: #7faf41;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.price-text{
+  color: gray;
+  font-size: 30px;
+}
+.price-memory{
+  padding-top: 9px;
+  padding-bottom: 24px;
+  border-top: 4px solid #7faf41;
+  background-color: #f2f2f2;
 }
 /* .facebook:hover{
   background-image:url('./img/facebook_hover.png');
@@ -416,6 +509,27 @@ body {
 @media screen and (max-width: 992px) {
   .titulo-direita{
     padding-left: 0px;
+  }
+  .price-text{
+    font-size: 15px;
+  }
+  .small-text{
+    font-size: 7px;
+  }
+  .medium-text{
+    font-size: 10px;
+  }
+  .medium-text-20G{
+    font-size: 10px;
+  }
+  .longer-text{
+    font-size: 20px;
+  }
+  .container-grid-prices {
+    padding-left: 56px!important;
+  }
+  .container-price-cards{
+    width: 100%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -452,6 +566,9 @@ body {
   .cards-home{
     display: none!important;
   }
+  .container-grid-prices {
+    padding-left: 74px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -462,6 +579,10 @@ body {
 @media screen and (max-width: 1339px) {
   .box-login{
     top:8%;
+  }
+  
+  .description-price{
+    width: 92%;
   }
 }
 @media screen and (max-width: 770px) {
@@ -493,5 +614,10 @@ body {
   }
   .container-feature-cards{
     margin-top: 22%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container-grid-prices {
+    padding-left: 41px!important;
   }
 }
