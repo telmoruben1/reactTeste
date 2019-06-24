@@ -15,6 +15,7 @@ import Feature from "./feature/Feature";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Quality from "./quality/Quality";
+import Contacts from "./contacts/Contacts";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/feature" component={Feature} />
         <Route path="/price" component={Price} />
         <Route path="/quality" component={Quality} />
+        <Route path="/contacts" component={Contacts} />
         <Route component={PageNotFound} />
       </Switch>
       <Footer></Footer>

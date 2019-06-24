@@ -510,6 +510,9 @@ body {
   position: relative;
   width: 67%;
   margin-left: 17%;
+  color: #777;
+  font-size: 16px;
+  
 }
 .text-title-quality{
   align-items: center;
@@ -532,6 +535,79 @@ body {
   align-items: center;
   align-self: center;
   padding: 0px 20px 0px 20px;
+}
+.title-contact{
+  font-family: 'Roboto Condensed',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 24px;
+  color: #7faf41;
+}
+.container-contacts{
+  margin-left: 9%;
+  margin-top:8%;
+}
+.text-contacts{
+  font-family: 'Roboto Condensed',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: justify;
+  color:#777;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 5%;
+}
+.contacts-apoio{
+  display: flex;
+  justify-content:center;
+  flex-direction:column;
+  position: relative;
+  width: 67%;
+  margin-left: 2%;
+  font-size: 13px;
+  color: #777;
+}
+.text-location{
+  display: flex;
+  justify-content:space-between;
+  flex-flow: row wrap;
+  flex-direction:row;
+  position: relative;
+  margin-top: 5%;
+  margin-bottom: 28%;
+  width: 100%;
+}
+.title-location{
+  font-size: 1.17em;
+  color: #7faf41;
+  font-weight: 300;
+  font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  align-items: center;
+  align-self: center;
+}
+.text-street{
+  margin: 0%;
+  font-size: 11px;
+  color: #777;
+}
+.coordinates-area{
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  margin-top: 6%;
+  width: 100%;
+}
+.href-coordinates{
+  font-size: 11px;
+  color: #444;
+  text-decoration: underline;
+}
+.href-coordinates:hover{
+  color: #7ead01;
+  text-decoration: underline;
+}
+.container-coordinate{
+  border: 1px solid #c6c6c6;
+  padding: 20px;
+  text-align: center;
 }
 /* .facebook:hover{
   background-image:url('./img/facebook_hover.png');
@@ -578,6 +654,10 @@ body {
   .container-price-cards{
     width: 100%;
   }
+  .container-coordinate{
+    margin-top: 35px;
+  }
+  
 }
 @media screen and (max-width: 1200px) {
   .button-aderir{

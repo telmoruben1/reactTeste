@@ -40,9 +40,9 @@ const Header = () => {
             <Link className="content-menu ml-4 side-bar" to="/accede"><Image className="mr-1 mb-1" src="../src/css/img/aderir.png"/>Aderir</Link>
             <Link className="content-menu ml-4 side-bar" to="/feature"><Image className="mr-1 mb-1" src="../src/css/img/carateristicas.png"/>Carateristicas</Link>
             <Link className="content-menu ml-4 side-bar" to="/price"><Image className="mr-1 mb-1" src="../src/css/img/euro.png"/>Preços</Link>
-            <Link className="content-menu ml-4 side-bar" to="/qualidade"><Image className="mr-1 mb-1" src="../src/css/img/qualidade.png"/>Qualidade</Link>
+            <Link className="content-menu ml-4 side-bar" to="/quality"><Image className="mr-1 mb-1" src="../src/css/img/qualidade.png"/>Qualidade</Link>
             <a className="content-menu ml-4 side-bar" href="www.acin.pt" target="_blank"><Image className="mr-1 mb-1" src="../src/css/img/empresa.png"/>ACIN</a>
-            <Link className="content-menu ml-4 side-bar" to="/contactos"><Image className="mr-1 mb-1" src="../src/css/img/contactos.png"/>Contactos</Link>
+            <Link className="content-menu ml-4 side-bar" to="/contacts"><Image className="mr-1 mb-1" src="../src/css/img/contactos.png"/>Contactos</Link>
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" >
@@ -54,8 +54,8 @@ const Header = () => {
             <Link className="content-menu ml-4" onClick={activeLink} to="/feature"><Image className="mr-1 mb-1" src="../src/css/img/carateristicas.png"/>Carateristicas</Link>
             <Link className="content-menu ml-4" onClick={activeLink} to="/price"><Image className="mr-1 mb-1" src="../src/css/img/euro.png"/>Preços</Link>
             <Link className="content-menu ml-4" onClick={activeLink} to="/quality"><Image className="mr-1 mb-1" src="../src/css/img/qualidade.png"/>Qualidade</Link>
-            <a className="content-menu ml-4" onClick={activeLink} href="www.acin.pt" target="_blank"><Image className="mr-1 mb-1" src="../src/css/img/empresa.png"/>ACIN</a>
-            <Link className="content-menu ml-4" onClick={activeLink} to="/contactos"><Image className="mr-1 mb-1" src="../src/css/img/contactos.png"/>Contactos</Link>
+            <a className="content-menu ml-4" onClick={activeLink} href="//www.acin.pt" rel="noopener noreferrer" target="_blank"><Image className="mr-1 mb-1" src="../src/css/img/empresa.png"/>ACIN</a>
+            <Link className="content-menu ml-4" onClick={activeLink} to="/contacts"><Image className="mr-1 mb-1" src="../src/css/img/contactos.png"/>Contactos</Link>
             {/* <Nav.Link className="content-menu ml-3" href="/authors">Authors</Nav.Link>
             <Nav.Link className="content-menu ml-3" href="/courses">Courses</Nav.Link>
             <Nav.Link className="content-menu ml-3" href="/about">About</Nav.Link> */}
