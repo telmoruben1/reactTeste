@@ -52,26 +52,34 @@ function ManageLoginForms({
       setTypeForm(3)
     }
   }
-//   function handleSave(event) {
-//     event.preventDefault();
-    
-//     if (!formIsValid()) return;
-//     setSaving(true);
-//     saveUser(user)
-//       .then(() => {
-//         toast.success("User saved.");
-//         history.push("/users");
-//       })
-//       .catch(error => {
-//         setSaving(false);
-//         setErrors({ onSave: error.message });
-//       });
-//   }
-//   function verifyCallback(response) {
-//     if(response) {
-//       setVerified(true);
-//     }
-//   }
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setUser(prevUser => ({
+      ...prevUser,
+      [name]: value
+    }));
+  }
+  function handleSave(event) {
+    event.preventDefault();
+    console.log("2");
+    console.log(user);
+    // if (!formIsValid()) return;
+    // setSaving(true);
+    // saveUser(user)
+    //   .then(() => {
+    //     toast.success("User saved.");
+    //     history.push("/users");
+    //   })
+    //   .catch(error => {
+    //     setSaving(false);
+    //     setErrors({ onSave: error.message });
+    //   });
+  }
+  // function verifyCallback(response) {
+  //   if(response) {
+  //     setVerified(true);
+  //   }
+  // }
 
   return (
     <div className="box-login">
@@ -80,8 +88,9 @@ function ManageLoginForms({
           case 1:
             return <LoginForm
                       // errors={errors}
-                      // onSave={handleSave}
+                      onSave={handleSave}
                       onChangeAction={handleChangeAction}
+                      onChange={handleChange}
                       // verifyCallback={verifyCallback}
                       // saving={saving}
                     />
