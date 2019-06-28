@@ -43,6 +43,7 @@ RecoveryForm.propTypes = {
   errors: PropTypes.object,
   onSave: PropTypes.func.isRequired,
   onChange:PropTypes.func.isRequired,
+  onChangeAction:PropTypes.func.isRequired,
   saving: PropTypes.bool
 };
 

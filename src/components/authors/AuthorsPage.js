@@ -72,8 +72,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      loadAuthors: bindActionCreators(authorActions.loadAuthors, dispatch),
-      deleteAuthor: bindActionCreators(authorActions.deleteAuthor, dispatch)
+      // loadAuthors: bindActionCreators(authorActions.loadAuthors, dispatch),
+      // deleteAuthor: bindActionCreators(authorActions.deleteAuthor, dispatch)
     }
   };
 }

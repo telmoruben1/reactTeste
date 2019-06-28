@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+/* import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { loadAuthors, saveAuthor } from "../../redux/actions/authorActions";
 import PropTypes from "prop-types";
@@ -111,3 +111,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ManageAuthorForm);
+*/

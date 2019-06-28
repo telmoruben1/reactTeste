@@ -1,13 +1,13 @@
 import React, {useState } from "react";
 import { connect } from "react-redux";
-import {saveUser } from "../../redux/actions/userActions";
+import {loginUser } from "../../redux/actions/userActions";
 import PropTypes from "prop-types";
 import AccedeForm from "./AccedeForm";
 import Footer from "../home/Footer";
 import { toast } from "react-toastify";
 
 function ManageAccedeForm({
-  saveUser,
+  loginUser,
   history,
   ...props
 }) {
@@ -53,7 +53,7 @@ function ManageAccedeForm({
     
     if (!formIsValid()) return;
     setSaving(true);
-    saveUser(user)
+    loginUser(user)
       .then(() => {
         toast.success("User saved.");
         history.push("/users");
@@ -83,7 +83,7 @@ function ManageAccedeForm({
 
 ManageAccedeForm.propTypes = {
   user:PropTypes.object.isRequired,
-  saveUser: PropTypes.func.isRequired,
+  loginUser: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
 };
 
@@ -95,7 +95,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  saveUser
+  loginUser
 };
 
 export default connect(

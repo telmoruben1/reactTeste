@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+/*import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { loadCourses, saveCourse } from "../../redux/actions/courseActions";
 import { loadAuthors } from "../../redux/actions/authorActions";
@@ -124,3 +124,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ManageCoursePage);
+
+*/

@@ -1,6 +1,6 @@
 import React, {useState } from "react";
 import { connect } from "react-redux";
-import {saveUser } from "../../redux/actions/userActions";
+import {loginUser } from "../../redux/actions/userActions";
 import PropTypes from "prop-types";
 import LoginForm from "./LoginForm";
 import RecoveryForm from "./RecoveryForm";
@@ -9,15 +9,15 @@ import { toast } from "react-toastify";
 import CcForm from "./CcForm";
 
 function ManageLoginForms({
-  saveUser,
+  loginUser,
   history,
   ...props
 }) {
  
   const [user, setUser] = useState({ ...props.user });
   const [typeform, setTypeForm] = useState(1);
-  const [errors, setErrors] = useState({});
-  const [saving, setSaving] = useState(false);
+  // const [errors, setErrors] = useState({});
+  // const [saving, setSaving] = useState(false);
 
 //   function formIsValid() {
 //     const { designacao, nif, morada,cp,localidade,email,telefone,nomeUtilizador,emailUtilizador,password,cofirPassword,conhecimento,condicoes } = user;
@@ -65,15 +65,15 @@ function ManageLoginForms({
     console.log(user);
     // if (!formIsValid()) return;
     // setSaving(true);
-    // saveUser(user)
-    //   .then(() => {
-    //     toast.success("User saved.");
-    //     history.push("/users");
-    //   })
-    //   .catch(error => {
-    //     setSaving(false);
-    //     setErrors({ onSave: error.message });
-    //   });
+    loginUser(user)
+      .then(() => {
+        toast.success("User saved.");
+        history.push("/users");
+      })
+      .catch(error => {
+        // setSaving(false);
+        // setErrors({ onSave: error.message });
+      });
   }
   // function verifyCallback(response) {
   //   if(response) {
@@ -120,7 +120,7 @@ function ManageLoginForms({
 
 ManageLoginForms.propTypes = {
   user:PropTypes.object.isRequired,
-  saveUser: PropTypes.func.isRequired,
+  loginUser: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
 };
 
@@ -132,7 +132,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  saveUser
+  loginUser
 };
 
 export default connect(
